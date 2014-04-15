@@ -1,6 +1,6 @@
 #version 120
-
-
+uniform float scale;
+uniform int size;
 uniform sampler2D displacementMap;
 varying vec3 color;
 void main(void)
@@ -11,12 +11,12 @@ float df;
 
 gl_TexCoord[0].xy = gl_MultiTexCoord0.xy;
 
-dv = texture2D( displacementMap, gl_MultiTexCoord0.xy );
+dv = texture2D( displacementMap, gl_MultiTexCoord0.xy/size );
 
-df = 0.30*dv.x + 0.59*dv.y + 0.11*dv.z;
+df = .1*dv.x + 0.1*dv.y + 0.1*dv.z;
 
-newVertexPos = vec4(gl_Normal * df * 100.0, 0.0) + gl_Vertex;
-    color = mix(vec3(1.),vec3(0.), dv.r );
+newVertexPos = vec4(gl_Normal * dv.r * scale, 0.0) + gl_Vertex;
+    color = mix(vec3(0.),vec3(.8), dv.b );
 
 gl_Position = gl_ModelViewProjectionMatrix * newVertexPos;
 }
