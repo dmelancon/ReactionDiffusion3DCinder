@@ -50,6 +50,9 @@ class ReactionDiffusionV1App : public AppNative {
     float           mTilt;
     int             mSize;
     int             mSpeed;
+    float          mColorValR;
+    float          mColorValG;
+    float          mColorValB;
 	static const int		FBO_WIDTH = SIZE, FBO_HEIGHT = SIZE;
     
     CameraPersp mCam;
@@ -63,7 +66,7 @@ void ReactionDiffusionV1App::prepareSettings(Settings *settings)
 //        settings->enableMultiTouch( false );
 
  settings->setWindowSize(SIZE,SIZE);
-settings->setFrameRate( 60.0f );
+ settings->setFrameRate( 60.0f );
 
 }
 
@@ -123,7 +126,7 @@ void ReactionDiffusionV1App::createVBOMesh(){
             Vec3f normal = cross(Vec3f(x, y+trisize,0.f)-Vec3f(x, y,0.f), Vec3f(x+trisize, y,0.f)-Vec3f(x, y,0.f)).normalized();
             normals.push_back(normal);
             texCoords.push_back( Vec2f( (x / (float)NUMX), (y / (float)NUMY) ) );
-            colors.push_back(ColorA(1.,1.,1.,8.));
+            colors.push_back(ColorA(1.,1.,1.,.8));
         }
         
     }
@@ -140,14 +143,17 @@ void ReactionDiffusionV1App::createVBOMesh(){
 
 void ReactionDiffusionV1App::setup()
 {
-    mSpeed = 5;
+    mSpeed = 3;
     mTilt = -300;
-    mReactionU = 0.25f;
-	mReactionV = 0.04f;
-	mReactionK = 0.047f;
-	mReactionF = 0.131f;
-    mScale =100.0;
+    mReactionU = 0.28f;
+	mReactionV = 0.03f;
+	mReactionK = 0.048f;
+	mReactionF = 0.072f;
+    mScale =39.0;
     mSize = 3;
+    mColorValR = .6;
+    mColorValG = .0;
+    mColorValB = .8;
 	mMousePressed = false;
     mParams = params::InterfaceGl::create( "Parameters", Vec2i( 175, 200 ) );
 	mParams->addParam( "Reaction u", &mReactionU, "min=0.0 max=0.4 step=0.01 keyIncr=u keyDecr=U" );
@@ -158,7 +164,9 @@ void ReactionDiffusionV1App::setup()
     mParams->addParam( "speed", &mSpeed, "min = 1 max= 25 step=1 ");
     mParams->addParam( "Tilt", &mTilt, "min=-1000. max=1000. step=1.0 keyIncr=f keyDecr=F" );
     mParams->addParam( "Size", &mSize, "min=1. max=16. step=1.0 keyIncr=f keyDecr=F" );
-
+    mParams->addParam( "R", &mColorValR, "min=.0 max=10. step=.01 keyIncr=f keyDecr=F" );
+    mParams->addParam( "G", &mColorValG, "min=.0 max=1. step=.01 keyIncr=f keyDecr=F" );
+    mParams->addParam( "B", &mColorValB, "min=.0 max=1. step=.01 keyIncr=f keyDecr=F" );
     gl::Fbo::Format format;
 	format.enableDepthBuffer( false );
     format.setColorInternalFormat(GL_RGBA32F_ARB);
@@ -186,7 +194,7 @@ void ReactionDiffusionV1App::setup()
     mTexture.setMagFilter( GL_LINEAR );
     
     mCam.setPerspective(60, getWindowAspectRatio(), 1, 10000);
-    mCam.lookAt(Vec3f(0,mTilt,300),Vec3f(0,0,0),Vec3f::yAxis());
+    mCam.lookAt(Vec3f(0,mTilt,0),Vec3f(0,0,0),Vec3f::yAxis());
 
 }
 
@@ -231,7 +239,7 @@ void ReactionDiffusionV1App::update(){
 		if( mMousePressed ){
 			glColor4f( 1.0f, 1.0f, 1.0f, -.5f );
 			RectMapping windowToFBO( getWindowBounds(), mFBOs[mCurrentFBO].getBounds() );
-			gl::drawSolidCircle( windowToFBO.map( mMouse ), 5.0f, 32 );
+			gl::drawSolidCircle( windowToFBO.map( (mMouse/2) ), 5.0f, 32 );
 		}
      
         mFBOs[ mCurrentFBO ].unbindFramebuffer();
@@ -251,13 +259,16 @@ void ReactionDiffusionV1App::draw()
     
 
     gl::pushMatrices();
+    gl::rotate(Vec3f(180,0,.0));
     gl::translate(Vec2f(-getWindowWidth()/2, -getWindowHeight()/2));
     mFBOs[mCurrentFBO].bindTexture(0);
     mShaderRefraction->bind();
     mShaderRefraction->uniform("displacementMap", 0);
     mShaderRefraction->uniform("scale", mScale);
     mShaderRefraction->uniform("size", mSize);
-
+    mShaderRefraction->uniform("colorValR", mColorValR);
+    mShaderRefraction->uniform("colorValG", mColorValG);
+    mShaderRefraction->uniform("colorValB", mColorValB);
     gl::draw(mWrapper);
     mShaderRefraction->unbind();
     mFBOs[mCurrentFBO].unbindTexture();

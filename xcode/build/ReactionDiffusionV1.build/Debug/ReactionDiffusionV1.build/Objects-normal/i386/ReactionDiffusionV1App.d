@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/src/ReactionDiffusionV1App.cpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/src/ReactionDiffusionV1App.cpp \
   ../../../cinder/include/cinder/app/AppNative.h \
   ../../../cinder/include/cinder/Camera.h \
   ../../../cinder/include/cinder/gl/Fbo.h \
@@ -9,20 +9,20 @@ dependencies: \
   ../../../cinder/boost/boost/lexical_cast.hpp \
   ../../../cinder/boost/boost/detail/lcast_precision.hpp \
   ../../../cinder/boost/boost/array.hpp \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../../../cinder/boost/boost/assert.hpp \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../../../cinder/boost/boost/functional/hash_fwd.hpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../../cinder/boost/boost/assert.hpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../../cinder/boost/boost/functional/hash_fwd.hpp \
   ../../../cinder/boost/boost/numeric/conversion/cast.hpp \
   ../../../cinder/boost/boost/numeric/conversion/converter.hpp \
   ../../../cinder/boost/boost/numeric/conversion/conversion_traits.hpp \
   ../../../cinder/boost/boost/numeric/conversion/detail/conversion_traits.hpp \
   ../../../cinder/boost/boost/numeric/conversion/detail/meta.hpp \
   ../../../cinder/boost/boost/mpl/equal_to.hpp \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../../../cinder/boost/boost/mpl/aux_/comparison_op.hpp \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../../../cinder/boost/boost/mpl/aux_/numeric_op.hpp \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../../../cinder/boost/boost/mpl/apply_wrap.hpp \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../../../cinder/boost/boost/mpl/aux_/include_preprocessed.hpp \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../../../cinder/boost/boost/preprocessor/cat.hpp \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../../../cinder/boost/boost/preprocessor/stringize.hpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../../cinder/boost/boost/mpl/aux_/comparison_op.hpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../../cinder/boost/boost/mpl/aux_/numeric_op.hpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../../cinder/boost/boost/mpl/apply_wrap.hpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../../cinder/boost/boost/mpl/aux_/include_preprocessed.hpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../../cinder/boost/boost/preprocessor/cat.hpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../../cinder/boost/boost/preprocessor/stringize.hpp \
   ../../../cinder/boost/boost/mpl/aux_/preprocessed/gcc/equal_to.hpp \
   ../../../cinder/boost/boost/numeric/conversion/detail/int_float_mixture.hpp \
   ../../../cinder/boost/boost/numeric/conversion/int_float_mixture_enum.hpp \
@@ -42,16 +42,16 @@ dependencies: \
   ../../../cinder/boost/boost/numeric/conversion/bounds.hpp \
   ../../../cinder/boost/boost/numeric/conversion/detail/bounds.hpp \
   ../../../cinder/boost/boost/numeric/conversion/numeric_cast_traits.hpp \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../../../cinder/boost/boost/cstdint.hpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../../cinder/boost/boost/cstdint.hpp \
   ../../../cinder/boost/boost/numeric/conversion/detail/numeric_cast_traits.hpp \
   ../../../cinder/boost/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp \
   ../../../cinder/boost/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_long_long.hpp \
   ../../../cinder/boost/boost/type_traits/has_left_shift.hpp \
   ../../../cinder/boost/boost/type_traits/detail/has_binary_operator.hpp \
   ../../../cinder/boost/boost/type_traits/is_fundamental.hpp \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../../../cinder/boost/boost/type_traits/detail/bool_trait_def.hpp \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../../../cinder/boost/boost/type_traits/detail/template_arity_spec.hpp \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../../../cinder/boost/boost/type_traits/detail/bool_trait_undef.hpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../../cinder/boost/boost/type_traits/detail/bool_trait_def.hpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../../cinder/boost/boost/type_traits/detail/template_arity_spec.hpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../../cinder/boost/boost/type_traits/detail/bool_trait_undef.hpp \
   ../../../cinder/boost/boost/type_traits/has_right_shift.hpp \
   ../../../cinder/boost/boost/math/special_functions/sign.hpp \
   ../../../cinder/boost/boost/math/tools/config.hpp \
@@ -66,10 +66,10 @@ dependencies: \
   ../../../cinder/boost/boost/mpl/aux_/contains_impl.hpp \
   ../../../cinder/boost/boost/mpl/find.hpp \
   ../../../cinder/boost/boost/mpl/remove_if.hpp \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../../../cinder/boost/boost/mpl/apply.hpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../../cinder/boost/boost/mpl/apply.hpp \
   ../../../cinder/boost/boost/mpl/vector.hpp \
   ../../../cinder/boost/boost/mpl/limits/vector.hpp \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../../../cinder/boost/boost/preprocessor/inc.hpp \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../../cinder/boost/boost/preprocessor/inc.hpp \
   ../../../cinder/boost/boost/mpl/vector/vector20.hpp \
   ../../../cinder/boost/boost/mpl/vector/vector10.hpp \
   ../../../cinder/boost/boost/mpl/vector/vector0.hpp \
@@ -122,5 +122,5 @@ dependencies: \
   ../../../cinder/include/cinder/params/Params.h \
   ../../../cinder/include/cinder/gl/Vbo.h \
   ../../../cinder/include/cinder/TriMesh.h \
-  /Users/dan/Documents/CinderProjects/ReactionDiffusionV1/xcode/../include/Resources.h \
+  /Users/dan/Documents/CinderProjects/ReactionDiffusion3DCinder/xcode/../../RDIFFSYPHON/include/Resources.h \
   ../../../cinder/include/cinder/CinderResources.h

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9E75AAB1-AD1F-409D-817E-B236324BAD54</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ReactionDiffusionV1</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CE1E8B6C-D0C6-4221-A8BA-C3A6443AB656</key>
+		<string>https://github.com/dmelancon/ReactionDiffusion3DCinder.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>xcode/ReactionDiffusionV1.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CE1E8B6C-D0C6-4221-A8BA-C3A6443AB656</key>
+		<string>../../..</string>
+		<key>DE682BD9-B81E-4BF8-A3E4-83971C50CC1B</key>
+		<string>../../../../RDIFFSYPHON</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dmelancon/ReactionDiffusion3DCinder.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CE1E8B6C-D0C6-4221-A8BA-C3A6443AB656</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DE682BD9-B81E-4BF8-A3E4-83971C50CC1B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RDIFFSYPHON</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CE1E8B6C-D0C6-4221-A8BA-C3A6443AB656</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ReactionDiffusion3DCinder</string>
+		</dict>
+	</array>
+</dict>
+</plist>
